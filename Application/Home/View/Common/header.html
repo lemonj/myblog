@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh">
+<!--
+            ,----------------,              ,---------,
+       ,-----------------------,          ,"        ,"|
+    , "                      ,"|        ,"        ,"  |
+    +-----------------------+  |      ,"        ,"    |
+    |  .-----------------.  |  |     +---------+      |
+    |  |                 |  |  |     | -==----'|      |
+    |  |  I LOVE DOS!    |  |  |     |         |      |
+    |  |  Bad command or |  |  |/----|`---=    |      |
+    |  |  C:\>_          |  |  |   ,/|==== ooo |      ;
+    |  |                 |  |  |  // |(((( [33]|    ,"
+    |  `-----------------'  |," .;'| |((((     |  ,"
+    +-----------------------+  ;;  | |         |,"
+       /_)______________(_/  //'   | +---------+
+   ___________________________/___  `,
+  /  oooooooooooooooo  .o.  oooo /,   \,"-----------
+ / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
+/_==__==========__==_ooo__ooo=_/'   /___________,"
+
+//-->
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>[title] - lemonyu.com</title>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+    <style>
+
+        /* 定义辅助CSS来美化简历头部 */
+        body{
+            font-family: 'microsoft yahei',Arial,sans-serif;
+        }
+
+        .cvheader{
+            border-bottom: 1px solid #DFDFDF;
+            padding-top:30px;
+            padding-bottom:20px;
+        }
+
+        .cvheader h1{
+            margin:0;
+        }
+
+        .address{
+            background: #efb73e;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        /* 定义辅助CSS来美化简历主体 */
+
+        .cvbody{
+            padding-top: 50px;
+        }
+
+        .cbox{
+            margin-bottom: 30px;
+            color: #FFF;
+            padding: 50px;
+        }
+
+        /* 定义cbox颜色 */
+        .green{
+            background: #2ecc71;
+        }
+
+        .orange{
+            background: orange;
+        }
+
+        .red{
+            background: #dd4814;
+        }
+
+        .bbox{
+            border: 1px solid #DFDFDF;
+            border-radius: 5px;
+            margin-bottom:30px;
+            padding: 50px;
+        }
+
+        .footer{
+            margin: 30px 0 30px;
+            padding: 50px;
+            background: #CCC;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+<!-- 定义简历的头部 //-->
+<div class="container navbar-default">
+    <div class="navbar-header">
+        　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#demo">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+        <a href="##" class="navbar-brand">LOGO</a>
+    </div>
+    <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。<?php if([title] == '王小钧_首页'){echo 'active';}?> -->
+    <div class="collapse navbar-collapse navbar-responsive-collapse" id="demo">
+        <ul class="nav navbar-nav">
+            <li class="co-p-main-nav-toplevel <?php if([title] == '王小钧_首页'){echo 'active';}?>">
+                <a href="/myblog">博客首页</a>
+            </li>
+            <li class="co-p-main-nav-toplevel <?php if([title] == '王小钧_视频'){echo 'active';}?>">
+                <a href="/myblog/index.php/home/index/live">我的视频</a>
+            </li>
+            <li class="co-p-main-nav-toplevel <?php if([title] == '王小钧_笔记'){echo 'active';}?>">
+                <a href="/myblog/index.php/home/index/note">我的笔记</a>
+            </li>
+            <li class="co-p-main-nav-toplevel <?php if([title] == '王小钧_相册'){echo 'active';}?>">
+                <a href="/myblog/index.php/home/index/album">我的相册</a>
+            </li>
+            <li class="co-p-main-nav-toplevel <?php if([title] == '王小钧_简历'){echo 'active';}?>">
+                <a href="/myblog/index.php/home/index/index">我的简历</a>
+            </li>
+        </ul>
+    </div>
+</div>

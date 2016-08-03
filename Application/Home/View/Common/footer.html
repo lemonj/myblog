@@ -1,0 +1,35 @@
+<!-- 定义简历页底 //-->
+<div class="container">
+    <div class="row">
+        <div class="footer text-center"  style="background-color: #232323;">
+            <ul class="list-inline">
+                <li><a href="http://php.net/docs.php" target="_blank">PHP</a></li>
+                <li><a href="http://www.w3school.com.cn/" target="_blank">W3C</a></li>
+                <li><a href="https://docs.phalconphp.com/zh/latest/reference/odm.html" target="_blank">Phalcon</a></li>
+                <li><a href="http://tool.chinaz.com/Tools/unixtime.aspx" target="_blank">Unix timestamp</a></li>
+                <li><a href="http://doc.redisfans.com/" target="_blank">Redis</a></li>
+                <li><a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank">MongoDB</a></li>
+                <li><a href="http://bootstrap.ninghao.net/getting-started.html" target="_blank">BootStrop</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 引入jQuery类库和Bootstrap3的Javascript类库 //-->
+<script type='text/javascript' src="http://libs.baidu.com/jquery/1.11.1/jquery.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script>
+
+    //公用JS
+    $(function(){
+        $('.co-p-main-nav-toplevel').bind('click',function(){
+            $('.co-p-main-nav-toplevel').removeClass('active');
+
+            $(this).addClass('active');
+        })
+    })
+
+</script>
+</body>
+</html>

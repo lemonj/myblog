@@ -1,102 +1,10 @@
-<!doctype html>
-<html lang="zh">
-<!--
-            ,----------------,              ,---------,
-       ,-----------------------,          ,"        ,"|
-    , "                      ,"|        ,"        ,"  |
-    +-----------------------+  |      ,"        ,"    |
-    |  .-----------------.  |  |     +---------+      |
-    |  |                 |  |  |     | -==----'|      |
-    |  |  I LOVE DOS!    |  |  |     |         |      |
-    |  |  Bad command or |  |  |/----|`---=    |      |
-    |  |  C:\>_          |  |  |   ,/|==== ooo |      ;
-    |  |                 |  |  |  // |(((( [33]|    ,"
-    |  `-----------------'  |," .;'| |((((     |  ,"
-    +-----------------------+  ;;  | |         |,"
-       /_)______________(_/  //'   | +---------+
-   ___________________________/___  `,
-  /  oooooooooooooooo  .o.  oooo /,   \,"-----------
- / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
-/_==__==========__==_ooo__ooo=_/'   /___________,"
-
-//-->
-
+<include file="common/header" title="王小钧_简历" />
 <!--
 感谢极客学院Terry Lee公布的简历模板
 
 原模板网址:http://www.gbtags.com/gb/demoviewer/3568/b8c4a67f-b20c-45f2-b9ba-c4cf060eb569/bs.html.htm
 //-->
-<head>
-    <meta charset="UTF-8">
-    <title>王小钧个人简历 - lemonyu.com</title>
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
-    <style>
-
-        /* 定义辅助CSS来美化简历头部 */
-        body{
-            font-family: 'microsoft yahei',Arial,sans-serif;
-        }
-
-        .cvheader{
-            border-bottom: 1px solid #DFDFDF;
-            padding-top:30px;
-            padding-bottom:20px;
-        }
-
-        .cvheader h1{
-            margin:0;
-        }
-
-        .address{
-            background: #efb73e;
-            color: #fff;
-            padding: 10px 0;
-        }
-
-        /* 定义辅助CSS来美化简历主体 */
-
-        .cvbody{
-            padding-top: 50px;
-        }
-
-        .cbox{
-            margin-bottom: 30px;
-            color: #FFF;
-            padding: 50px;
-        }
-
-        /* 定义cbox颜色 */
-        .green{
-            background: #2ecc71;
-        }
-
-        .orange{
-            background: orange;
-        }
-
-        .red{
-            background: #dd4814;
-        }
-
-        .bbox{
-            border: 1px solid #DFDFDF;
-            border-radius: 5px;
-            margin-bottom:30px;
-            padding: 50px;
-        }
-
-        .footer{
-            margin: 30px 0 30px;
-            padding: 50px;
-            background: #CCC;
-            color: #FFF;
-        }
-    </style>
-</head>
-<body>
-<!-- 定义简历的头部 //-->
-
+<link href="/myblog/Public/css/zzsc-demo.css" rel="stylesheet">
 <div class="container">
     <div class="row cvheader">
         <div class="col-lg-7 col-md-7 col-xs-12">
@@ -228,34 +136,29 @@
                     <p><span class="glyphicon glyphicon-headphones"></span> 音乐</p>
                     </p>
                 </div>
+
+
+
+                <div class="bbox">
+
+                    <div class="zzsc-container">
+                        <div id='tag-cloud'>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
-
     </div>
 </div>
+<input type="hidden" value='{$encode_str}' id="encode_str"/>
+<include file="common/footer" />
 
-<!-- 定义简历页底 //-->
-<div class="container">
-    <div class="row">
-        <div class="footer text-center"  style="background-color: #232323;">
-            <ul class="list-inline">
-                <li><a href="http://php.net/docs.php" target="_blank">PHP</a></li>
-                <li><a href="http://www.w3school.com.cn/" target="_blank">W3C</a></li>
-                <li><a href="https://docs.phalconphp.com/zh/latest/reference/odm.html" target="_blank">Phalcon</a></li>
-                <li><a href="http://tool.chinaz.com/Tools/unixtime.aspx" target="_blank">Unix timestamp</a></li>
-                <li><a href="http://doc.redisfans.com/" target="_blank">Redis</a></li>
-                <li><a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank">MongoDB</a></li>
-                <li><a href="http://bootstrap.ninghao.net/getting-started.html" target="_blank">BootStrop</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+<script src="/myblog/Public/js/jquery.svg3dtagcloud.min.js"></script>
 
-<!-- 引入jQuery类库和Bootstrap3的Javascript类库 //-->
-<script type='text/javascript' src="http://libs.baidu.com/jquery/1.11.1/jquery.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <script>
     /*Javascript源代码*/
@@ -313,6 +216,46 @@
 
     });
 
+
+    $( document ).ready( function() {
+
+        var str = $('#encode_str').val();
+        var entries;
+
+        if(str){
+            entries = eval('('+str+')');
+        }else{
+            entries = [];
+        }
+
+
+        var settings = {
+
+            entries: entries,
+            width: 385,
+            height: 385,
+            radius: '65%',
+            radiusMin: 75,
+            bgDraw: true,
+            bgColor: '#fff',
+            opacityOver: 1.00,
+            opacityOut: 0.05,
+            opacitySpeed: 6,
+            fov: 800,
+            speed: 0.5,
+            fontFamily: 'Oswald, Arial, sans-serif',
+            fontSize: '15',
+            fontColor: '#494A5F',
+            fontWeight: 'normal',//bold
+            fontStyle: 'normal',//italic
+            fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+            fontToUpperCase: true
+
+        };
+
+        //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+        $( '#tag-cloud' ).svg3DTagCloud( settings );
+
+    } );
+
 </script>
-</body>
-</html>
